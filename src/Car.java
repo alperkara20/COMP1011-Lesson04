@@ -1,20 +1,27 @@
 
-public class Car implements HasStorage, UsesRoads {
+public class Car extends Vehicle implements HasStorage, UsesRoads {
+	
+	// INSTANCE VARS +++++++++++++++++++++++++++++
+	
+	private Boolean _trunk;
 
-	public Car() {
-		// TODO Auto-generated constructor stub
+	// CONSRRUCTOR +++++++++++++++++++++++++++++++
+	public Car(Boolean trunk) {
+		this._trunk = trunk;
 	}
 
+	// OVERRIDDEN METHODS ++++++++++++++++++++++++++++++++++
 	@Override
 	public Boolean usesRoads() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return (this.getTireCount() > 0) ? true : false;
+		
 	}
 
 	@Override
 	public Boolean hasStorage() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return (this._trunk == true) ? true : false;
 	}
 
 }

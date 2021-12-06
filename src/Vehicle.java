@@ -1,8 +1,4 @@
 /**
- * 
- */
-
-/**
  * @author Alper
  *
  */
@@ -11,17 +7,25 @@ public abstract class Vehicle {
 	// INSTANCE VARIABLES (FIELDS) ++++++++++++++++++++++++
 	private int _tireCount; // the underscore in the beginning of a 
 							// variable means its a private variable.
+	private int _passengerCount;
 
 	// PROPERTIES ++++++++++++++++++++++++++++++++++++++++++
-	private int get_tireCount() {
+	public int getTireCount() {
 		return _tireCount;
 	}
 
-	private void set_tireCount(int _tireCount) {
+	public void setTireCount(int _tireCount) {
 		this._tireCount = _tireCount;
 	}
 
-	// CONSTRUCTOR 
+	public int getPassengerCount() {
+		return _passengerCount;
+	}
+
+	public void setPassengerCount(int _passengerCount) {
+		this._passengerCount = _passengerCount;
+	}
+	// CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++
 	public void Vehicle() {
 		
 	}
@@ -32,5 +36,7 @@ public abstract class Vehicle {
 	public String toString() {
 		return "El vehiculo tienen " + this._tireCount + " neumaticos.";
 	}
+
+	
 
 }
